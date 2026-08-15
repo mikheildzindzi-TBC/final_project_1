@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TBC Bank UI Regression Suite" parallel="tests" thread-count="2">
+
+    <!-- Desktop profile: 1440x900. Change ONLY this file
+         to switch viewports - no source-code changes required. -->
+    <test name="Desktop Regression" preserve-order="false">
+        <parameter name="profile" value="desktop"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.HomeNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationsMapDisplayTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationsFilterTest"/>
+            <class name="ge.tbc.testautomation.tests.LoanCalculatorTest"/>
+            <class name="ge.tbc.testautomation.tests.CurrencyRatesTest"/>
+        </classes>
+    </test>
+
+    <!-- Mobile profile: 390x844 with Chrome mobile emulation -->
+    <test name="Mobile Regression" preserve-order="false">
+        <parameter name="profile" value="mobile"/>
+        <classes>
+            <class name="ge.tbc.testautomation.tests.HomeNavigationTest"/>
+            <class name="ge.tbc.testautomation.tests.LocationsMapDisplayTest"/>
+            <class name="ge.tbc.testautomation.tests.CurrencyRatesTest"/>
+        </classes>
+    </test>
+
+    <test name="Mobile vs Desktop Behavior">
+        <classes>
+            <class name="ge.tbc.testautomation.tests.MobileResponsiveNavTest"/>
+        </classes>
+    </test>
+
+</suite>
