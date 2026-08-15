@@ -157,5 +157,5 @@ src/
 │   └── util/      # Mobile emulation, thread-safe profile context
 └── test/java/ge/tbc/testautomation/
     └── tests/     # TestNG test classes ONLY (5+ automated scenarios)
-testng.xml          # parallel="tests", desktop + mobile profiles
+testng.xml         # parallel="tests", desktop + mobile profiles
 ```
